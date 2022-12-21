@@ -4,13 +4,13 @@ on: push
 
 jobs:
   test:
-    runs: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - run: hello.py
   build:
     needs: [test]
-    runs: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: action/upload-artifact@v2
